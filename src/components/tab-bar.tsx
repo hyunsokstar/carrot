@@ -1,6 +1,5 @@
 "use client";
 
-
 import {
     HomeIcon as SolidHomeIcon,
     NewspaperIcon as SolidNewspaperIcon,
@@ -21,46 +20,43 @@ import { usePathname } from "next/navigation";
 
 export default function TabBar() {
     const pathname = usePathname();
+
     return (
-        <div className="
-        fixed bottom-0 w-full mx-auto max-w-screen-md grid grid-cols-5 border-t px-5 py-3 *:text-white
-        border-2 border-yellow-500
-        ">
-            <Link href="/products" className="flex flex-col items-center gap-px">
-                {pathname === "/products" ? (
-                    <SolidHomeIcon className="w-7 h-7" />
+        <div className="fixed bottom-0 flex justify-between border-2 border-yellow-500 w-full mx-auto">
+            {/* Button 1 */}
+            <Link href="/home" className="flex flex-col items-center gap-px py-2 px-4">
+                {pathname === "/home" ? (
+                    <SolidHomeIcon className="w-7 h-7 text-yellow-500" />
                 ) : (
                     <OutlineHomeIcon className="w-7 h-7" />
                 )}
                 <span>홈</span>
             </Link>
-            <Link href="/life" className="flex flex-col items-center gap-px">
+
+            {/* Button 2 */}
+            <Link href="/life" className="flex flex-col items-center gap-px py-2 px-4">
                 {pathname === "/life" ? (
-                    <SolidNewspaperIcon className="w-7 h-7" />
+                    <SolidNewspaperIcon className="w-7 h-7 text-yellow-500" />
                 ) : (
                     <OutlineNewspaperIcon className="w-7 h-7" />
                 )}
                 <span>동네생활</span>
             </Link>
-            <Link href="/chat" className="flex flex-col items-center gap-px">
+
+            {/* Button 3 */}
+            <Link href="/chat" className="flex flex-col items-center gap-px py-2 px-4">
                 {pathname === "/chat" ? (
-                    <SolidChatIcon className="w-7 h-7" />
+                    <SolidChatIcon className="w-7 h-7 text-yellow-500" />
                 ) : (
                     <OutlineChatIcon className="w-7 h-7" />
                 )}
                 <span>채팅</span>
             </Link>
-            <Link href="/live" className="flex flex-col items-center gap-px">
-                {pathname === "/live" ? (
-                    <SolidVideoCameraIcon className="w-7 h-7" />
-                ) : (
-                    <OutlineVideoCameraIcon className="w-7 h-7" />
-                )}
-                <span>쇼핑</span>
-            </Link>
-            <Link href="/profile" className="flex flex-col items-center gap-px">
+
+            {/* Button 4 */}
+            <Link href="/profile" className="flex flex-col items-center gap-px py-2 px-4">
                 {pathname === "/profile" ? (
-                    <SolidUserIcon className="w-7 h-7" />
+                    <SolidUserIcon className="w-7 h-7 text-yellow-500" />
                 ) : (
                     <OutlineUserIcon className="w-7 h-7" />
                 )}
