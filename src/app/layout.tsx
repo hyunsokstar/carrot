@@ -21,14 +21,13 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${inter.className}
-        w-full mx-auto
+        w-1/2 mx-auto
         bg-neutral-900
         text-white
         border-2 border-pink-500
         `
         }
       >
-        <div className="border-1 border-green-500">hi2</div>
         {children}
       </body>
     </html >

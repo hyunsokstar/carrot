@@ -49,12 +49,16 @@ export default async function ProductDetail({
         <div>
             {/* 박스1 */}
             <div className="relative h-[50vh]">
-                <Image fill src={product.photo} alt={product.title} />
+                <Image
+                    fill src={product.photo}
+                    alt={product.title}
+                    className="object-cover"
+                />
             </div>
 
             {/* 박스2 */}
             <div className="p-5 flex items-center gap-3 border-b border-neutral-700">
-                <div className="size-10 rounded-full">
+                <div className="size-10 rounded-full overflow-hidden">
                     {product.user.avatar !== null ? (
                         <Image
                             src={product.user.avatar}

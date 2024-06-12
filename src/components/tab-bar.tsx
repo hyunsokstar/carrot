@@ -17,15 +17,14 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-
 export default function TabBar() {
     const pathname = usePathname();
 
     return (
-        <div className="fixed bottom-0 flex justify-between border-2 border-yellow-500 w-full mx-auto">
+        <div className="flex justify-between border-2 border-gray-100">
             {/* Button 1 */}
-            <Link href="/home" className="flex flex-col items-center gap-px py-2 px-4">
-                {pathname === "/home" ? (
+            <Link href="/products" className="flex flex-col items-center gap-px py-2 px-4">
+                {pathname === "/products" ? (
                     <SolidHomeIcon className="w-7 h-7 text-yellow-500" />
                 ) : (
                     <OutlineHomeIcon className="w-7 h-7" />
