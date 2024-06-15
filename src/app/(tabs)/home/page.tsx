@@ -17,13 +17,9 @@ async function getProducts() {
 }
 
 
-
 export default async function Products() {
     const products = await getProducts();
     return (
-        // <div>
-        //     <h1 className="text-white text-4xl">Products!</h1>
-        // </div>
         <div className="p-5 flex flex-col gap-5">
             {products.length ? products.map((product) => (
                 <ListProduct key={product.id} {...product} />

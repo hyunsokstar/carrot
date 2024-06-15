@@ -23,8 +23,8 @@ export default function TabBar() {
     return (
         <div className="flex justify-between border-2 border-gray-100">
             {/* Button 1 */}
-            <Link href="/products" className="flex flex-col items-center gap-px py-2 px-4">
-                {pathname === "/products" ? (
+            <Link href="/home" className="flex flex-col items-center gap-px py-2 px-4">
+                {pathname === "/home" ? (
                     <SolidHomeIcon className="w-7 h-7 text-yellow-500" />
                 ) : (
                     <OutlineHomeIcon className="w-7 h-7" />

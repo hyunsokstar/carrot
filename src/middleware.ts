@@ -23,9 +23,9 @@ export async function middleware(request: NextRequest) {
         if (!exists) { // 현재 요청이 비로그인 상태에서 요청 가능한 범위에 있지 않다면 
             return NextResponse.redirect(new URL("/", request.url)); // 디폴트 페이지로 리다이렉트
         }
-    } else { // 로그인 한 상태에서
+    } else { // 로그인 상태
         if (exists) { // 퍼블릭 페이지 즉 비로그인 상태에서만 접근 할수 있는 페이지를 요청한 경우
-            return NextResponse.redirect(new URL("/products", request.url)); // products 페이지로 리다이렉트
+            return NextResponse.redirect(new URL("/home", request.url)); // products 페이지로 리다이렉트
         }
     }
 }

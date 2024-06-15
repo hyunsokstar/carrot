@@ -48,9 +48,13 @@ export default async function ProductDetail({
     return (
         <div>
             {/* 박스1 */}
-            <div className="relative h-[50vh]">
+            {/* {product.photo} */}
+            <div className="relative aspect-square">
+                {/* <Image fill src={product.photo} alt={product.title} /> */}
                 <Image
-                    fill src={product.photo}
+                    fill
+                    // src={product.photo}
+                    src={`${product.photo}/public`}
                     alt={product.title}
                     className="object-cover"
                 />
@@ -58,7 +62,7 @@ export default async function ProductDetail({
 
             {/* 박스2 */}
             <div className="p-5 flex items-center gap-3 border-b border-neutral-700">
-                <div className="size-10 rounded-full overflow-hidden">
+                <div className="size-10 rounded-full">
                     {product.user.avatar !== null ? (
                         <Image
                             src={product.user.avatar}
@@ -90,7 +94,7 @@ export default async function ProductDetail({
                     flex
                     justify-between
                     items-center
-                    bg-neutral-800 
+                    bg-neutral-800
                     border
                     border-red-100
                 "
