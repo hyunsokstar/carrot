@@ -3,7 +3,7 @@ import TabBar from "@/components/tab-bar";
 
 export default function HomeLayout({
     children,
-    // modal,
+    modal,
 }: {
     children: React.ReactNode;
     modal: React.ReactNode;
@@ -11,7 +11,8 @@ export default function HomeLayout({
     return (
         <>
             {children}
-            {/* {modal} */}
+            {modal}
+            <TabBar />
         </>
     );
 }

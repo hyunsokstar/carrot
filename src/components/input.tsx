@@ -19,7 +19,7 @@ export default function FormInput({
     ...rest
     // }: FormInputProps) {
 }: InputProps & InputHTMLAttributes<HTMLInputElement>) {
-    console.log(rest);
+    // console.log(rest);
 
     return (
         <div className="flex flex-col gap-2">

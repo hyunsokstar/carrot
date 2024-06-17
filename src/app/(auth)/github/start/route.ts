@@ -11,9 +11,7 @@ export function GET() {
 
     const formattedParams = new URLSearchParams(params).toString();
     const finalUrl = `${baseURL}?${formattedParams}`;
-
-
-    console.log("finalUrl : ", finalUrl);
+    // console.log("finalUrl : ", finalUrl);
 
 
     return Response.redirect(finalUrl);

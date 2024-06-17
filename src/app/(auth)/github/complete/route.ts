@@ -6,7 +6,7 @@ import { NextRequest } from "next/server";
 
 export async function GET(request: NextRequest) {
     const code = request.nextUrl.searchParams.get("code");
-    console.log("code : ", code);
+    // console.log("code : ", code);
 
     if (!code) {
         return notFound();

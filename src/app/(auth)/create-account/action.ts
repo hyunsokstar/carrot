@@ -116,8 +116,7 @@ export async function createAccount(prevState: any, formData: FormData) {
     if (!result.success) {
         return result.error.flatten();
     } else { // 유효성 검사 성공적으로 통과시
-        console.log(result.data);
-
+        // console.log(result.data);
         const hashedPassword = await bcrypt.hash(result.data.password, 12); // 비밀 번호 해쉬화
 
 
@@ -132,7 +131,7 @@ export async function createAccount(prevState: any, formData: FormData) {
                 id: true
             }
         })
-        console.log("user : ", user);
+        // console.log("user : ", user);
 
         // 쿠키 객체 생성
         // const cookie = await getIronSession(cookies(), {
