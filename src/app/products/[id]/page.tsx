@@ -60,8 +60,8 @@ const getCachedProductTitle = nextCache(getProductTitle, ["product-title"], {
 export async function generateMetadata({ params }: {
     params: { id: string };
 }) {
-    // const product = await getProduct(Number(params.id));
-    const product = await getCachedProductTitle(Number(params.id));
+    const product = await getProduct(Number(params.id));
+    // const product = await getCachedProductTitle(Number(params.id));
 
     return {
         title: product?.title,
@@ -168,5 +168,11 @@ export default async function ProductDetail({
     );
 }
 
-// src\app\(tabs)\home\@modal\(..)products\[id]\page.tsx
-// src\app\products\[id]\page.tsx
+export async function generateStaticParams() {
+    const products = await db.product.findMany({
+        select: {
+            id: true,
+        },
+    });
+    return products.map((product) => ({ id: product.id + "" }));
+}

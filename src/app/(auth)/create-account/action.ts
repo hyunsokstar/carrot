@@ -8,27 +8,6 @@ import bcrypt from "bcrypt";
 import { redirect } from "next/navigation";
 import getSession from "@/lib/session";
 
-// async function checkUniqueUsername(username: string) {
-//     // return !username.includes("potato")
-//     const user = await db.user.findUnique({
-//         where: { username: username },
-//         select: {
-//             id: true,
-//         }
-//     })
-//     return !Boolean(user);
-// }
-// async function checkUniqueEmail(email: string) {
-//     const user = await db.user.findUnique({
-//         where: {
-//             email: email
-//         },
-//         select: {
-//             id: true
-//         }
-//     })
-//     return !Boolean(user);
-// }
 
 const formSchema = z
     .object({

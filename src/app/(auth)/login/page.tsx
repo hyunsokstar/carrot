@@ -11,9 +11,6 @@ import { logIn } from "./action";
 
 
 export default function LogIn() {
-    // const [state, action] = useFormState(handleForm, {
-    //     potato: 1
-    // } as any)
     const [state, dispatch] = useFormState(logIn, null);
 
 

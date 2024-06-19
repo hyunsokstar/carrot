@@ -1,8 +1,9 @@
 import ProductList from "@/components/porduct-list";
 import db from "@/lib/db";
 import { Prisma } from "@prisma/client";
-// import { unstable_cache as nextCache } from "next/cache";
 import { unstable_cache as nextCache, revalidatePath } from "next/cache";
+export const dynamic = "force-dynamic";
+
 
 export type InitialProducts = Prisma.PromiseReturnType<
     typeof getInitialProducts
